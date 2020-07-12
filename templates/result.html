@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    body {
+      padding: 50px 100px;
+    }
+    h1 {
+      text-align: center;
+    }
+    ul {
+      width: 100%;
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+  </style>
+  <body>
+    <h1>Result after filtering </h1>
+    <div class="content">
+      <div>
+        <h2>Spam_List: {{result[0]}}</h2>
+        <ul class="list-group">
+          {% for item in spam_list %}
+          <li class="list-group-item list-group-item-secondary">{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h2>Ham_List: {{result[1]}}</h2>
+        <ul class="list-group">
+          {% for item in ham_list %}
+          <li class="list-group-item list-group-item-info">{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
