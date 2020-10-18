@@ -1,4 +1,4 @@
-# spam-email
+## spam-email
 A simple app using svm to classify spam email in Gmail
 
 Install virtual environment:
